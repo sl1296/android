@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -39,7 +40,7 @@ public class FragmentText extends Fragment {
             lesson.add(new DataTextLesson(i));
         }
         adapterWeb = new AdapterTextWeb(getContext(), web);
-        ListView listWeb = view.findViewById(R.id.lv_textveb);
+        final ListView listWeb = view.findViewById(R.id.lv_textveb);
         listWeb.setAdapter(adapterWeb);
         listWeb.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -48,10 +49,47 @@ public class FragmentText extends Fragment {
             }
         });
 
-        RecyclerView listLesson = view.findViewById(R.id.rv_lesson);
-        GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 3);
+        final RecyclerView listLesson = view.findViewById(R.id.rv_lesson);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         listLesson.setLayoutManager(layoutManager);
         adapterLesson = new AdapterTextLesson(lesson);
         listLesson.setAdapter(adapterLesson);
+
+        final ImageView web1= view.findViewById(R.id.extraweb1);
+        final ImageView web2= view.findViewById(R.id.extraweb2);
+        web1.setOnClickListener(new ImageView.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                listWeb.setVisibility(View.VISIBLE);
+                web1.setVisibility(View.GONE);
+                web2.setVisibility(View.VISIBLE);
+            }
+        });
+        web2.setOnClickListener(new ImageView.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                listWeb.setVisibility(View.GONE);
+                web2.setVisibility(View.GONE);
+                web1.setVisibility(View.VISIBLE);
+            }
+        });
+        final ImageView lesson1= view.findViewById(R.id.extralesson1);
+        final ImageView lesson2= view.findViewById(R.id.extralesson2);
+        lesson1.setOnClickListener(new ImageView.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                listLesson.setVisibility(View.VISIBLE);
+                lesson1.setVisibility(View.GONE);
+                lesson2.setVisibility(View.VISIBLE);
+            }
+        });
+        lesson2.setOnClickListener(new ImageView.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                listLesson.setVisibility(View.GONE);
+                lesson2.setVisibility(View.GONE);
+                lesson1.setVisibility(View.VISIBLE);
+            }
+        });
     }
 }

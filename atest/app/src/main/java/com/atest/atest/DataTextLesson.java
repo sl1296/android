@@ -9,7 +9,16 @@ public class DataTextLesson {
         item = pos;
         time = pos;
     }
-    String str() {
-        return "位置：" + pos + "\n价格：" + price + "\n课程内容：" + item + "\n课程安排：" + time;
+    String str1() {
+        return pos;
+    }
+    String str2(){
+        return price;
+    }
+    String str3(){
+        return item;
+    }
+    String str4(){
+        return time;
     }
 }

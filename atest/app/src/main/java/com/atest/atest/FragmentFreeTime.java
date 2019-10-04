@@ -51,10 +51,10 @@ public class FragmentFreeTime extends Fragment {
             }
         });
         image = new ArrayList<>();
-        image.add(new XImageData());
-        image.add(new XImageData());
-        image.add(new XImageData());
-        image.add(new XImageData());
+        image.add(new XImageData(R.drawable.test1));
+        image.add(new XImageData(R.drawable.test2));
+        image.add(new XImageData(R.drawable.test3));
+        image.add(new XImageData(R.drawable.test4));
         cvp.setPages(image, new HolderCreator<ViewHolder>() {
             @Override
             public ViewHolder createViewHolder() {

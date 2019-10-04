@@ -37,10 +37,10 @@ public class ActivityMain extends AppCompatActivity {
             .setBarBackgroundColor("#2FA8E1")
             .setInActiveColor("#929292")
             .setActiveColor("#ffffff")
-            .addItem(new BottomNavigationItem(R.drawable.ic_launcher_background,"课余").setInactiveIconResource(R.drawable.ic_launcher_foreground)) // 添加Item
-            .addItem(new BottomNavigationItem(R.drawable.ic_launcher_background,"测测").setInactiveIconResource(R.drawable.ic_launcher_foreground))
-            .addItem(new BottomNavigationItem(R.drawable.ic_launcher_background,"文萃").setInactiveIconResource(R.drawable.ic_launcher_foreground))
-            .addItem(new BottomNavigationItem(R.drawable.ic_launcher_background,"足迹").setInactiveIconResource(R.drawable.ic_launcher_foreground))
+            .addItem(new BottomNavigationItem(R.drawable.homec,"课余").setInactiveIconResource(R.drawable.home)) // 添加Item
+            .addItem(new BottomNavigationItem(R.drawable.penc,"测测").setInactiveIconResource(R.drawable.pen))
+            .addItem(new BottomNavigationItem(R.drawable.pagec,"文萃").setInactiveIconResource(R.drawable.page))
+            .addItem(new BottomNavigationItem(R.drawable.facec,"足迹").setInactiveIconResource(R.drawable.face))
             .setFirstSelectedPosition(0)
             .initialise();
     }

@@ -12,11 +12,14 @@ import java.util.List;
 public class AdapterTextLesson extends RecyclerView.Adapter<AdapterTextLesson.ViewHolder> {
     private List<DataTextLesson> list;
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView title, item;
+        TextView title, item1,item2,item3,item4;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.tv_title);
-            item = itemView.findViewById(R.id.tv_item);
+            item1 = itemView.findViewById(R.id.tv_item1);
+            item2 = itemView.findViewById(R.id.tv_item2);
+            item3 = itemView.findViewById(R.id.tv_item3);
+            item4 = itemView.findViewById(R.id.tv_item4);
         }
     }
     AdapterTextLesson(List<DataTextLesson> x) {
@@ -32,7 +35,10 @@ public class AdapterTextLesson extends RecyclerView.Adapter<AdapterTextLesson.Vi
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         DataTextLesson now = list.get(i);
         viewHolder.title.setText(now.name);
-        viewHolder.item.setText(now.str());
+        viewHolder.item1.setText(now.str1());
+        viewHolder.item2.setText(now.str2());
+        viewHolder.item3.setText(now.str3());
+        viewHolder.item4.setText(now.str4());
     }
     @Override
     public int getItemCount() {

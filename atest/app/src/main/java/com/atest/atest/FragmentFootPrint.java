@@ -24,8 +24,8 @@ public class FragmentFootPrint extends Fragment {
         ImageView iv = view.findViewById(R.id.iv_image);
         TextView user = view.findViewById(R.id.tv_username);
         TextView coin = view.findViewById(R.id.tv_coin);
-        iv.setImageResource(R.drawable.ic_launcher_foreground);
-        user.setText("用户名称");
-        coin.setText("金币：100");
+        //iv.setImageResource(R.drawable.ic_launcher_background);
+        user.setText("测试用户01");
+        coin.setText("100");
     }
 }
