@@ -8,11 +8,11 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
-public class AdapterFreeTimeFocus extends BaseAdapter {
-    private static final int res = R.layout.lv_freetime_focus;
+public class AdapterTextFocus extends BaseAdapter {
+    private static final int res = R.layout.lv_text_focus;
     public List<DataFocus> data;
     public Context context;
-    AdapterFreeTimeFocus(Context context, List<DataFocus> x) {
+    AdapterTextFocus(Context context, List<DataFocus> x) {
         this.context = context;
         data = x;
     }
@@ -32,21 +32,23 @@ public class AdapterFreeTimeFocus extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         DataFocus now = (DataFocus) getItem(position);
         View view;
-        ViewHolderFreeTimeFocus vh;
+        ViewHolderTextFocus vh;
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(res, parent, false);
-            vh = new ViewHolderFreeTimeFocus();
+            vh = new ViewHolderTextFocus();
             vh.title = view.findViewById(R.id.tv_title);
             vh.item = view.findViewById(R.id.tv_item);
+            vh.text = view.findViewById(R.id.tv_text);
             vh.image = view.findViewById(R.id.iv_image);
             view.setTag(vh);
         }else{
             view = convertView;
-            vh = (ViewHolderFreeTimeFocus)view.getTag();
+            vh = (ViewHolderTextFocus)view.getTag();
         }
         vh.title.setText(now.title);
         vh.item.setText(now.item);
-        vh.image.setImageResource(R.drawable.ic_launcher_foreground);
+        vh.text.setText(now.text);
+        vh.image.setImageResource(now.img);
         return view;
     }
 }

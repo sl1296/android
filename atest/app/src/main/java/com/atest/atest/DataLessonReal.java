@@ -1,8 +1,8 @@
 package com.atest.atest;
 
-public class DataTextLesson {
+public class DataLessonReal {
     String name, pos, price, item, time;
-    DataTextLesson(int i) {
+    DataLessonReal(int i) {
         name = "**辅导班" + i;
         pos = "" + i;
         price = pos;

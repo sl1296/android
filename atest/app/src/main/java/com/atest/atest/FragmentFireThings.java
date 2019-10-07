@@ -8,11 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentExam extends Fragment {
-    private View view;
+public class FragmentFireThings extends Fragment {
     @Override
     @Nullable public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view=inflater.inflate(R.layout.fragment_exam, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_fire_things, container, false);
     }
 }

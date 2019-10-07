@@ -6,31 +6,234 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#ffba26">
-
+        android:layout_marginBottom="5dp"
+        android:background="#ffa26ac4">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginBottom="20dp"
-            android:layout_weight="1"
-            android:gravity="left|center"
-            android:textColor="@android:color/background_light"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:text="测测"
-            android:textSize="18sp" />
-
-
+            android:textSize="20sp"
+            android:textColor="#ff000000"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#77aa77ff">
+        <TextView
+            android:text="普通测试"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="21sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ff000000"/>
+        <LinearLayout
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="7dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle">
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:text="个性化\n测试"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#ff000000" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/jian"/>
+        </LinearLayout>
+        <TextView
+            android:text="关系\n测试"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="潜能\n测试"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#77aa77ff">
+        <LinearLayout
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="7dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle">
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:text="个性化\n测试"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="#ff000000" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:src="@drawable/jian"/>
+        </LinearLayout>
+        <TextView
+            android:text="关系\n测试"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="潜能\n测试"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="精准测试"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="21sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ff000000"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#77aa77ff">
+        <TextView
+            android:text="一对一\n心理咨询"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="21sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ff000000"/>
+        <TextView
+            android:text="心理\n老师"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="生涯\n规划"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="更多..."
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginRight="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        android:background="#77aa77ff">
+        <TextView
+            android:text="卡特尔16\n人格测试"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="霍兰德\n测试"
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="更多..."
+            android:layout_width="95dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="7dp"
+            android:textSize="19sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="热门测试"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="21sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="#ff000000"/>
+    </LinearLayout>
+
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:visibility="gone">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
         <LinearLayout
             android:id="@+id/layout1"
             android:layout_width="wrap_content"
@@ -40,7 +243,6 @@
             android:layout_marginBottom="20dp"
             android:background="@drawable/layout1"
             android:orientation="vertical">
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,7 +250,6 @@
                 android:gravity="center"
                 android:text="普通测试"
                 android:textSize="18sp" />
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,7 +258,6 @@
                 android:background="@drawable/layout2"
                 android:drawableRight="@drawable/jian"
                 android:text="个性化测试" />
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

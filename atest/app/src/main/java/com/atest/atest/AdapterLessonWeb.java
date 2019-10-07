@@ -8,11 +8,11 @@ import android.widget.BaseAdapter;
 
 import java.util.List;
 
-public class AdapterFreeTimeActive extends BaseAdapter {
-    private static final int res = R.layout.lv_freetime_active;
-    public List<DataActive> data;
+public class AdapterLessonWeb extends BaseAdapter {
+    private static final int res = R.layout.lv_text_web;
+    public List<DataLessonWeb> data;
     public Context context;
-    AdapterFreeTimeActive(Context context, List<DataActive> x) {
+    AdapterLessonWeb(Context context, List<DataLessonWeb> x) {
         this.context = context;
         data = x;
     }
@@ -30,18 +30,18 @@ public class AdapterFreeTimeActive extends BaseAdapter {
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        DataActive now = (DataActive) getItem(position);
+        DataLessonWeb now = (DataLessonWeb) getItem(position);
         View view;
-        ViewHolderFreeTimeActive vh;
+        ViewHolderLessonWeb vh;
         if (convertView == null) {
             view = LayoutInflater.from(context).inflate(res, parent, false);
-            vh = new ViewHolderFreeTimeActive();
+            vh = new ViewHolderLessonWeb();
             vh.title = view.findViewById(R.id.tv_title);
             vh.item = view.findViewById(R.id.tv_item);
             view.setTag(vh);
         }else{
             view = convertView;
-            vh = (ViewHolderFreeTimeActive)view.getTag();
+            vh = (ViewHolderLessonWeb)view.getTag();
         }
         vh.title.setText(now.title);
         vh.item.setText(now.item);

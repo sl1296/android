@@ -19,18 +19,17 @@ import com.zhpan.viewpager.view.CircleViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragmentText extends Fragment {
+public class FragmentFire extends Fragment {
     private View view;
     private XNavigationView nv;
     private ViewPager vp;
-    private TextView tvFocus, tvSquare, tvNear, tvActive;
+    private TextView tvText, tvFamous, tvThings;
     private List<Fragment> fragment;
     private CircleViewPager cvp;
     private List<XImageData> image;
-    //private String searchText;
     @Override
     @Nullable public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_text, container, false);
+        view = inflater.inflate(R.layout.fragment_fire, container, false);
         return view;
     }
     @Override
@@ -45,42 +44,34 @@ public class FragmentText extends Fragment {
     }
     private void initView() {
         fragment = new ArrayList<>();
-        fragment.add(new FragmentTextFocus());
-        fragment.add(new FragmentTextSquare());
-        fragment.add(new FragmentTextNear());
-        fragment.add(new FragmentTextActive());
+        fragment.add(new FragmentFireText());
+        fragment.add(new FragmentFireFamous());
+        fragment.add(new FragmentFireThings());
         nv = view.findViewById(R.id.nv_line);
+        nv.initNum(3);
         vp = view.findViewById(R.id.vp_mainm);
-        tvFocus = view.findViewById(R.id.tv_focus);
-        tvSquare = view.findViewById(R.id.tv_square);
-        tvNear = view.findViewById(R.id.tv_near);
-        tvActive = view.findViewById(R.id.tv_active);
-        setSelect(tvFocus);
-        setUnselect(tvSquare);
-        setUnselect(tvNear);
-        setUnselect(tvActive);
-        tvFocus.setOnClickListener(new View.OnClickListener() {
+        tvText = view.findViewById(R.id.tv_text);
+        tvFamous = view.findViewById(R.id.tv_famous);
+        tvThings = view.findViewById(R.id.tv_things);
+        setSelect(tvText);
+        setUnselect(tvFamous);
+        setUnselect(tvThings);
+        tvText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 vp.setCurrentItem(0);
             }
         });
-        tvSquare.setOnClickListener(new View.OnClickListener() {
+        tvFamous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 vp.setCurrentItem(1);
             }
         });
-        tvNear.setOnClickListener(new View.OnClickListener() {
+        tvThings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 vp.setCurrentItem(2);
-            }
-        });
-        tvActive.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                vp.setCurrentItem(3);
             }
         });
         vp.setAdapter(new AdapterText(getChildFragmentManager(), fragment));
@@ -96,25 +87,17 @@ public class FragmentText extends Fragment {
                 vp.setCurrentItem(i);
                 nv.setPageSelected(i);
                 if (i == 0) {
-                    setSelect(tvFocus);
-                    setUnselect(tvSquare);
-                    setUnselect(tvNear);
-                    setUnselect(tvActive);
+                    setSelect(tvText);
+                    setUnselect(tvFamous);
+                    setUnselect(tvThings);
                 } else if (i == 1) {
-                    setUnselect(tvFocus);
-                    setSelect(tvSquare);
-                    setUnselect(tvNear);
-                    setUnselect(tvActive);
+                    setUnselect(tvText);
+                    setSelect(tvFamous);
+                    setUnselect(tvThings);
                 } else if (i == 2) {
-                    setUnselect(tvFocus);
-                    setUnselect(tvSquare);
-                    setSelect(tvNear);
-                    setUnselect(tvActive);
-                } else if (i == 3) {
-                    setUnselect(tvFocus);
-                    setUnselect(tvSquare);
-                    setUnselect(tvNear);
-                    setSelect(tvActive);
+                    setUnselect(tvText);
+                    setUnselect(tvFamous);
+                    setSelect(tvThings);
                 }
             }
             @Override
@@ -146,41 +129,13 @@ public class FragmentText extends Fragment {
                 return new XImageViewHolder();
             }
         });
-        /*
-        SearchView sv = view.findViewById(R.id.sv_search);
-        sv.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                search(s);
-                return false;
-            }
-            @Override
-            public boolean onQueryTextChange(String s) {
-                searchText = s;
-                return false;
-            }
-        });
-        Button search = view.findViewById(R.id.bt_search);
-        search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                search(searchText);
-            }
-        });
-        */
     }
     private void setSelect(TextView x) {
         x.setTextColor(0xff000000);
         x.setTextSize(20);
     }
     private void setUnselect(TextView x) {
-        x.setTextColor(0xff767676);
+        x.setTextColor(0xffaaaaaa);
         x.setTextSize(17);
     }
-    /*
-    private void search(String s) {
-        TextView tmp = view.findViewById(R.id.test1);
-        tmp.setText(s);
-    }
-    */
 }

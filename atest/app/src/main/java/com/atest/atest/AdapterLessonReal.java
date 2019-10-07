@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class AdapterTextLesson extends RecyclerView.Adapter<AdapterTextLesson.ViewHolder> {
-    private List<DataTextLesson> list;
+public class AdapterLessonReal extends RecyclerView.Adapter<AdapterLessonReal.ViewHolder> {
+    private List<DataLessonReal> list;
     static class ViewHolder extends RecyclerView.ViewHolder {
         TextView title, item1,item2,item3,item4;
         public ViewHolder(@NonNull View itemView) {
@@ -22,7 +22,7 @@ public class AdapterTextLesson extends RecyclerView.Adapter<AdapterTextLesson.Vi
             item4 = itemView.findViewById(R.id.tv_item4);
         }
     }
-    AdapterTextLesson(List<DataTextLesson> x) {
+    AdapterLessonReal(List<DataLessonReal> x) {
         list = x;
     }
     @Override
@@ -33,7 +33,7 @@ public class AdapterTextLesson extends RecyclerView.Adapter<AdapterTextLesson.Vi
     }
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        DataTextLesson now = list.get(i);
+        DataLessonReal now = list.get(i);
         viewHolder.title.setText(now.name);
         viewHolder.item1.setText(now.str1());
         viewHolder.item2.setText(now.str2());

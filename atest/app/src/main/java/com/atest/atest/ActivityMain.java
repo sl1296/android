@@ -19,7 +19,7 @@ public class ActivityMain extends AppCompatActivity {
         initView();
     }
     private void initView() {
-        fragment = new Fragment[]{new FragmentFreeTime(), new FragmentExam(), new FragmentText(), new FragmentFootPrint()};
+        fragment = new Fragment[]{new FragmentText(), new FragmentFire(), new FragmentExam(), new FragmentLesson(), new FragmentFoot()};
         replaceFragment(0);
         bar = findViewById(R.id.bnb_bottom);
         bar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
@@ -34,12 +34,13 @@ public class ActivityMain extends AppCompatActivity {
         });
         bar.setMode(BottomNavigationBar.MODE_FIXED)
             .setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_RIPPLE)
-            .setBarBackgroundColor("#2FA8E1")
-            .setInActiveColor("#929292")
-            .setActiveColor("#ffffff")
-            .addItem(new BottomNavigationItem(R.drawable.homec,"课余").setInactiveIconResource(R.drawable.home)) // 添加Item
-            .addItem(new BottomNavigationItem(R.drawable.penc,"测测").setInactiveIconResource(R.drawable.pen))
+            .setBarBackgroundColor("#ffffffff")
+            .setInActiveColor("#ffffff")
+            .setActiveColor("#ffa26ac4")
             .addItem(new BottomNavigationItem(R.drawable.pagec,"文萃").setInactiveIconResource(R.drawable.page))
+            .addItem(new BottomNavigationItem(R.drawable.firec,"燃烧").setInactiveIconResource(R.drawable.fire))
+            .addItem(new BottomNavigationItem(R.drawable.penc,"测测").setInactiveIconResource(R.drawable.pen))
+            .addItem(new BottomNavigationItem(R.drawable.homec,"课余").setInactiveIconResource(R.drawable.home))
             .addItem(new BottomNavigationItem(R.drawable.facec,"足迹").setInactiveIconResource(R.drawable.face))
             .setFirstSelectedPosition(0)
             .initialise();

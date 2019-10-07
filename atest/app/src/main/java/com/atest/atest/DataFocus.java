@@ -3,19 +3,32 @@ package com.atest.atest;
 import android.os.Bundle;
 
 public class DataFocus {
-    String title, item;
+    String title, item, text;
+    int img;
     DataFocus(int i) {
         title = i + "**老师";
         item = "首页首页首页";
+        text = "哈哈哈";
+        img = R.drawable.activity;
+    }
+    DataFocus(String vtitle, String vitem, String vtext, int vimg) {
+        title = vtitle;
+        item = vitem;
+        text = vtext;
+        img = vimg;
     }
     DataFocus(Bundle x) {
         title = x.getString("title");
         item = x.getString("item");
+        text = x.getString("text");
+        img = x.getInt("img");
     }
     Bundle toBundle() {
         Bundle ret = new Bundle();
         ret.putString("title", title);
         ret.putString("item", item);
+        ret.putString("text", text);
+        ret.putInt("img", img);
         return ret;
     }
     String str(){

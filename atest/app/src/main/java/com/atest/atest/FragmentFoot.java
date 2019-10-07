@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class FragmentFootPrint extends Fragment {
+public class FragmentFoot extends Fragment {
     private View view;
     @Override
     @Nullable public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_footprint, container, false);
+        view = inflater.inflate(R.layout.fragment_foot, container, false);
         return view;
     }
 

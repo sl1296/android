@@ -1,135 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#ffba26">
-
+        android:background="#ffa26ac4">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp"
             android:layout_marginLeft="15dp"
-            android:layout_weight="1"
-            android:gravity="left|center"
-            android:textColor="@android:color/background_light"
+            android:gravity="center"
             android:text="文萃"
-            android:textSize="18sp" />
-
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#ff000000"/>
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:layout_marginTop="3dp"
-            android:background="@android:drawable/editbox_background_normal"
-            android:ems="10"
-            android:hint="找点乐子"
-            android:inputType="date"
-            android:textSize="15sp" />
-
-        <ImageView
-            android:id="@+id/searchany"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="3dp"
-            android:layout_marginRight="30dp"
-            app:srcCompat="@android:drawable/ic_menu_search" />
-
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:background="#ffd0d0d0">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:textSize="18sp"
+                android:text="搜索内容" />
+        </LinearLayout>
         <TextView
+            android:text="北京"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:layout_marginRight="7dp"
-            android:background="@drawable/city"
-            android:textColor="@android:color/background_light"
-            android:gravity="center|left"
-            android:text="北京" />
-
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:textSize="18sp"
+            android:background="@drawable/city"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#ffba26">
-
-        <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="精选课推荐"
-        android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/extraweb1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="7dp"
-            app:srcCompat="@android:drawable/ic_input_add" />
-
-        <ImageView
-            android:id="@+id/extraweb2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="7dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/ic_delete" />
+        android:background="#ffa26ac4">
     </LinearLayout>
-    <ListView
-        android:id="@+id/lv_textveb"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:visibility="gone"
-        android:layout_weight="3" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#ffba26">
-        <TextView
+        android:background="#77aa77ff"
+        android:orientation="vertical">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="辅导班推荐"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/extralesson1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="7dp"
-            android:layout_gravity="center_vertical"
-            app:srcCompat="@android:drawable/ic_input_add" />
-        <ImageView
-            android:id="@+id/extralesson2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginRight="7dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/ic_delete" />
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_focus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="  关注     "/>
+                    <TextView
+                        android:id="@+id/tv_square"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="     广场     "/>
+                    <TextView
+                        android:id="@+id/tv_near"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="     附近     "/>
+                    <TextView
+                        android:id="@+id/tv_active"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="     活动  "/>
+                </LinearLayout>
+                <com.atest.atest.XNavigationView
+                    android:id="@+id/nv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+        </LinearLayout>
     </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_lesson"
+    <TextView
+        android:id="@+id/test1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <com.zhpan.viewpager.view.CircleViewPager
+        android:id="@+id/cvp_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="gone"
-        android:layout_weight="2" />
-
+        android:layout_weight="1"
+        app:interval="2000"/>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_mainm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4" />
 </LinearLayout>

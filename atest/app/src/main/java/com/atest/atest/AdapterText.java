@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-public class AdapterFreeTime extends FragmentPagerAdapter {
+public class AdapterText extends FragmentPagerAdapter {
     private List<Fragment> list;
-    AdapterFreeTime(FragmentManager fm, List<Fragment> x) {
+    AdapterText(FragmentManager fm, List<Fragment> x) {
         super(fm);
         list = x;
     }

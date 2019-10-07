@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.atest.atest">
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".ActivityMain">
+        <activity
+            android:name=".ActivityMain"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,7 +21,8 @@
         </activity>
         <activity android:name=".ActivityHot" />
         <activity android:name=".ActivityFocus" />
-        <activity android:name=".ActivityTextWeb"></activity>
+        <activity android:name=".ActivityLessonReal" />
+        <activity android:name=".ActivityLessonWeb" />
+        <activity android:name=".ActivityLessonWebItem"/>
     </application>
-
 </manifest>

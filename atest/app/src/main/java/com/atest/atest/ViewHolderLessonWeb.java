@@ -2,6 +2,6 @@ package com.atest.atest;
 
 import android.widget.TextView;
 
-public class ViewHolderFreeTimeActive {
+public class ViewHolderLessonWeb {
     TextView title, item;
 }

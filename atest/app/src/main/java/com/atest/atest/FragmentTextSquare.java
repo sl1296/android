@@ -8,9 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class FragmentFreeTimeSquare extends Fragment {
+public class FragmentTextSquare extends Fragment {
     @Override
     @Nullable public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_freetime_square, container, false);
+        return inflater.inflate(R.layout.fragment_text_square, container, false);
     }
 }

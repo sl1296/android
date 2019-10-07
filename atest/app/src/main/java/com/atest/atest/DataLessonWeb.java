@@ -2,13 +2,13 @@ package com.atest.atest;
 
 import android.os.Bundle;
 
-public class DataTextWeb {
+public class DataLessonWeb {
     String title, item;
-    DataTextWeb(int i) {
+    DataLessonWeb(int i) {
         title = "在线教育网站" + i;
         item = "**** **** ****";
     }
-    DataTextWeb(Bundle x) {
+    DataLessonWeb(Bundle x) {
         title = x.getString("title");
         item = x.getString("item");
     }

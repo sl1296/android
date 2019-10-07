@@ -7,8 +7,6 @@ import android.widget.ImageView;
 
 import com.zhpan.viewpager.holder.ViewHolder;
 
-import java.util.List;
-
 public class XImageViewHolder implements ViewHolder {
     private ImageView iv;
     @Override
@@ -19,7 +17,6 @@ public class XImageViewHolder implements ViewHolder {
     }
     @Override
     public void onBind(Context context,Object data, int position, int size) {
-        XImageData tem= (XImageData) data;
-        iv.setImageResource(tem.photo);
+        iv.setImageResource(((XImageData)data).photo);
     }
 }
